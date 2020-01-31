@@ -20,6 +20,9 @@ MAINTAINER "RIC"
 
 LABEL name="Generic initcontainer image for RIC Platform components"
 
+#ARG ARCH=amd64
+ARG ARCH=arm64
+
 RUN apk update
 
 # iproute2: required for e2 termination
@@ -27,7 +30,7 @@ RUN apk add iproute2
 # kubectl: required for xapp/ricplt helm installers
 RUN apk add openssl
 # kubectl: required for xapp/ricplt helm installers
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.14.1/bin/linux/amd64/kubectl /bin/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.14.1/bin/linux/${ARCH}/kubectl /bin/kubectl
 RUN chmod +x /bin/kubectl
 
 COPY bin/ricplt-init.sh /ricplt-init.sh
