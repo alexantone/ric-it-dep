@@ -25,7 +25,7 @@ RUN apk update
 RUN apk add openssl
 
 # unfortunately not available by itself in apk
-ADD https://storage.googleapis.com/kubernetes-release/release/v1.14.1/bin/linux/amd64/kubectl /bin/kubectl
+ADD https://storage.googleapis.com/kubernetes-release/release/v1.14.1/bin/linux/arm64/kubectl /bin/kubectl
 RUN chmod +x /bin/kubectl
 
 COPY bin/cert-gen.sh /bin/cert-gen.sh

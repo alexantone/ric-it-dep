@@ -16,6 +16,8 @@
 #   limitations under the License.                                             #
 ################################################################################
 
+set -x
+
 if [ "$#" -eq 1 ]; then
     OVERRIDEYAML=$1
 else

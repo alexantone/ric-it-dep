@@ -44,7 +44,7 @@ global:
   helmRepositoryCred: xapp-mgr-creds
 
   # Endpoint of k8s API server
-  k8sAPIHost: https://kubernetes.default.svc.cluster.local/
+  k8sAPIHost: https://apiserver.rec.io:6443/
 
   # The ingress URL definitions for the ingress controller in four namespaces
   ingressurl:
@@ -59,12 +59,12 @@ global:
       deployNameSpace: ricinfra
       image:
         tillerTLSSecrets:
-          repository: nexus3.o-ran-sc.org:10004/o-ran-sc
+          repository: akrainoenea
           name: it-dep-secret
           tag: 0.0.2
         tiller:
-          repository: gcr.io
-          name: kubernetes-helm/tiller
+          repository: jessestuart
+          name: tiller
           tag: v2.12.3
       secret:
         create: true
@@ -92,6 +92,7 @@ global:
 a1mediator:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   image:
     name: ric-plt-a1
     tag: 1.0.4
@@ -103,6 +104,7 @@ a1mediator:
 appmgr:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   image:
     init:
       name: it-dep-init
@@ -113,9 +115,10 @@ appmgr:
 
 
 # DBAAS
-dbaas:
+dbaas1:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   backend:
     iterminationGracePeriodSeconds: 0
     image:
@@ -126,6 +129,7 @@ dbaas:
 e2mgr:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   image:
     name: ric-plt-e2mgr
     tag: 3.0.1
@@ -138,6 +142,7 @@ e2mgr:
 e2term:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   image:
     name: ric-plt-e2
     tag: 3.0.1
@@ -154,6 +159,7 @@ e2term:
 rtmgr:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   image:
     name: ric-plt-rtmgr
     tag: 0.3.9
@@ -163,6 +169,7 @@ rtmgr:
 submgr:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   image:
     name: ric-plt-submgr
     tag: 0.10.7
@@ -171,6 +178,7 @@ submgr:
 vespamgr:
   # Use the following option to override the docker registry value
   # repositoryOverride:
+  repositoryOverride: akrainoenea
   image:
     name: ric-plt-vespamgr
     tag: 0.0.8
@@ -178,15 +186,16 @@ vespamgr:
 
 # RAN Resource Monitor
 rsm:
+  repositoryOverride: akrainoenea
   image:
     name: ric-plt-resource-status-manager
     tag: 3.0.1
 
 # Jaeger Adapter
 jaegeradapter:
-  repositoryOverride: docker.io
+  repositoryOverride: akrainoenea
   image:
-    name: jaegertracing/all-in-one
+    name: jaegertracing-all-in-one
     tag: 1.12
     pullPolicy: IfNotPresent
 
