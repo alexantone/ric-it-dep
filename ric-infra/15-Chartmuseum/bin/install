@@ -16,6 +16,8 @@
 #   limitations under the License.                                             #
 ################################################################################
 
+set -x
+set +e # This is required as some some grep invocations fail
 
 while [ -n "$1" ]; do # while loop starts
 
