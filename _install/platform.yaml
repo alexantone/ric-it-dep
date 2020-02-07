@@ -26,7 +26,7 @@ global:
     platform: ricplt
     aux: ricaux
   # Docker registry from which RIC platform components pull the images
-  repository: nexus3.o-ran-sc.org:10004/o-ran-sc
+  repository: nexus3.o-ran-sc.org:10002/o-ran-sc
 
   # Name of the K8S docker credential that is onboarded by 20-credential
   repositoryCred: docker-reg-cred
@@ -59,7 +59,7 @@ global:
       deployNameSpace: ricinfra
       image:
         tillerTLSSecrets:
-          repository: nexus3.o-ran-sc.org:10004/o-ran-sc
+          repository: nexus3.o-ran-sc.org:10002/o-ran-sc
           name: it-dep-secret
           tag: 0.0.2
         tiller:
@@ -128,7 +128,7 @@ e2mgr:
   # repositoryOverride:
   image:
     name: ric-plt-e2mgr
-    tag: 3.0.1
+    tag: 2.0.10
   env:
     RIC_ID: "bbbccc-abcd0e/20"
   privilegedmode: false
@@ -156,7 +156,7 @@ rtmgr:
   # repositoryOverride:
   image:
     name: ric-plt-rtmgr
-    tag: 0.3.3
+    tag: 0.3.9
   loglevel: DEBUG
 
 # Subscription Manager
@@ -180,7 +180,7 @@ vespamgr:
 rsm:
   image:
     name: ric-plt-resource-status-manager
-    tag: 2.0.7
+    tag: 2.0.10
 
 # Jaeger Adapter
 jaegeradapter:
