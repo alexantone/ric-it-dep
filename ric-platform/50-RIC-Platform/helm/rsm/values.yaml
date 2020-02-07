@@ -43,6 +43,7 @@ rsm:
   privilegedmode: false
 
   replicaCount: 1
+  enableResourceStatus: true
 
 
   # Service ports are now defined in
