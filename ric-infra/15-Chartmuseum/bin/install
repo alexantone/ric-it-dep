@@ -16,8 +16,6 @@
 #   limitations under the License.                                             #
 ################################################################################
 
-set -x
-set +e
 
 while [ -n "$1" ]; do # while loop starts
 
