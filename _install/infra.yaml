@@ -46,7 +46,7 @@ global:
 
 
   # Endpoint of k8s API server
-  k8sAPIHost: https://kubernetes.default.svc.cluster.local/
+  k8sAPIHost: https://apiserver.rec.io:6443/
 
   # The ingress URL definitions for the ingress controller in four namespaces
   ingressurl:
