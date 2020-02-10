@@ -19,7 +19,7 @@
 # Global common setting
 #-------------------------------------------------------------------------
 global:
-  releasePrefix: r1
+  releasePrefix: r2
   namespace:
     xapp: ricxapp
 
