@@ -22,7 +22,7 @@ global:
   releasePrefix: r1
   namespace:
     xapp: ricxapp
-    infra: ricinfra
+    infra: auxinfra
     platform: ricplt
     aux: ricaux
   # Docker registry from which RIC platform components pull the images
