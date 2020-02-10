@@ -21,6 +21,6 @@ sleep 5
 
 echo '************ Deploying AUX ************'
 # Derive platform.yaml from RECIPE_EXAMPLE/RIC_PLATFORM_RECIPE_EXAMPLE
-[ -f platform.yaml ]  && bash -e /opt/ric/dep/bin/deploy-ric-aux ./aux.yaml
+[ -f aux.yaml ]  && bash -e /opt/ric/dep/bin/deploy-ric-aux ./aux.yaml
 sleep 5
 
