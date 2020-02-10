@@ -124,9 +124,10 @@ chartmuseum:
 
 
 elfkp:
-  enable: true
+  enable: false
 
 kong:
+  enable: false
   proxy:
     http:
       containerPort: 32080

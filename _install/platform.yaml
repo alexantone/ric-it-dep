@@ -113,7 +113,7 @@ appmgr:
 
 
 # DBAAS
-dbaas:
+dbaas1:
   # Use the following option to override the docker registry value
   # repositoryOverride:
   backend:
